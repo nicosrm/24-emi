@@ -15,11 +15,71 @@
     \end{enumerate}
 \end{task}
 
+geordnete Urliste: 88 92 93 94 96 96 96 97 97 98 98 98 98 100 100 101 101 101 101 102 104 104 105 106
+
+Stichprobenumfang $n=24$
+
+$\sqrt{n} = \sqrt{24} \approx 4.8990 \Rightarrow \ell=5$ Klassen (nach Faustregel)
+
+Einteilung der Klassen mit Breite $d_j=5$ wie folgt:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|ccccc}
+    $j$                       & 1                   & 2         & 3          & 4                  & 5                   \\ \hline
+    Klasse                    & $[85,90)$           & $[90,95)$ & $[95,100)$ & $[100,105)$        & $[105,110)$         \\
+    absolute Häufigkeit $h_j$ & 1                   & 3         & 9          & 10                 & 1                   \\
+    relative Häufigkeit $r_j$ & $0.041\overline{6}$ & 0.125     & 0.375      & $0.41\overline{6}$ & $0.041\overline{6}$
+\end{tabular}
+\end{table}
+
+% TODO: Histogramm
+
+
 \begin{task}
     \begin{enumerate}
         \item[(b)] Berechnen Sie die Werte der (gewöhnlichen, nicht klassierten) empirischen Verteilungsfunktion $F$ der Daten an den Stellen $x_1=95.5$ und $x_2=100$.
     \end{enumerate}
 \end{task}
+
+% ACHTUNG: **NICHT** klassiert!!
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|llll}
+     $j$      & Klasse   & $a_j$     & $r_j$               & $F(x_j)$ \\ \hline
+     1        & 88       & 1         & $0.041\overline{6}$ & $0.041\overline{6}$ \\
+     2        & 92       & 1         & $0.041\overline{6}$ & $0.08\overline{3}$  \\
+     3        & 93       & 1         & $0.041\overline{6}$ & $0.125$             \\
+     4        & 94       & 1         & $0.041\overline{6}$ & $0.1\overline{6}$   \\
+     5        & 96       & 3         & $0.125$             & $0.291\overline{6}$ \\
+     6        & 97       & 2         & $0.08\overline{3}$  & $0.375$             \\
+     7        & 98       & 4         & $0.1\overline{6}$   & $0.541\overline{6}$ \\
+     8        & 100      & 2         & $0.08\overline{3}$  & $0.625$             \\
+     9        & 101      & 4         & $0.1\overline{6}$   & $0.791\overline{6}$ \\
+     $\vdots$ & $\vdots$ & $\vdots$  & $\vdots$            & $\vdots$
+\end{tabular}
+\end{table}
+
+$$
+F(x) = \begin{cases}
+    0      & \text{für}~x<88 \\
+    % 0.0417 & \text{für}~88\le x<92 \\
+    % 0.0833 & \text{für}~92\le x<93 \\
+    % 0.125  & \text{für}~93\le x<94 \\
+    \vdots & \\
+    0.1667 & \text{für}~94\le x<96 \\
+    % 0.2917 & \text{für}~96\le x<97 \\
+    % 0.375  & \text{für}~97\le x<98 \\
+    % 0.5417 & \text{für}~98\le x<100 \\
+    0.625  & \text{für}~100\le x<101 \\
+    \vdots & \\
+    1      & \text{für}~x\le 106
+\end{cases}
+$$
+
+$\Rightarrow F(x_1) = F(95.5) = 0.1\overline{6},~~F(x_2) = F(100) = 0.625$
+
 
 \begin{task}
     \begin{enumerate}
