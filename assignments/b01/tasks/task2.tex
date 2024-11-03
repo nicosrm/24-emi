@@ -36,7 +36,26 @@ Einteilung der Klassen mit Breite $d_j=5$ wie folgt:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{assets/task2_histogramm.jpeg}
-    \caption{Histogramm für Aufgabe 2.a}
+    \caption{Histogramm für Aufgabe 2.a (handgezeichnet)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=0.8\textwidth, height=10cm,
+        area style,
+        ymin=0, ymax=11,
+        ylabel = absolute Häufigkeiten,
+        xlabel = Klasseneinteilung,
+        ytick distance=2,
+        minor y tick num = 1,
+        xtick distance=5
+    ]
+        \addplot+[ybar interval, mark=no] plot coordinates { (85,1) (90,3) (95,9) (100,10) (105,1) (110,0)};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Histogramm für Aufgabe 2.a (PGF/TikZ)}
 \end{figure}
 
 
@@ -113,7 +132,7 @@ $x_{(n)} = x_{(24)} = 106$
 
 $\Rightarrow$ Quartilsabstand $d_Q = \tilde{x}_{0.75} - \tilde{x}_{0.25} = 101 - 96 = 5$
 
-$\frac32 d_Q = \frac32\cdot5 = 7.5 \Rightarrow [88.5, 108.5]$ \\
+$\frac32 \cdot d_Q = \frac32\cdot5 = 7.5 \Rightarrow [88.5, 108.5]$ \\
 $\Rightarrow$ Ausreißer: $\lbrace 88 \rbrace$
 
 $3\cdot d_Q = 3\cdot5 = 15 \Rightarrow [81, 116]$ \\
@@ -128,5 +147,33 @@ rechter Whisker: $\max\lbrace x_j : x_j \le \tilde{x}_{0.75} + \frac32 d_Q \rbra
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{assets/task2_box_plot.jpeg}
-    \caption{Klassischer Box-Plot zu Aufgabe 2.c}
+    \caption{Klassischer Box-Plot zu Aufgabe 2.c (handgezeichnet)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=0.9\textwidth, height=5cm,
+        xmin=80, xmax=120,
+        ymin=0, ymax=2, yticklabel=\empty
+    ]
+        \addplot+[
+            boxplot prepared={
+                median=98,
+                upper quartile=101,
+                lower quartile=96,
+                upper whisker=92,
+                lower whisker=106
+            }
+        ] coordinates { (0,88) };   % Ausreißer
+
+        \addplot[dashed] coordinates {(88.5,0) (88.5,2)};
+        \addplot[dashed] coordinates {(108.5,0) (108.5,2)};
+        
+        \addplot[dashed] coordinates {(81,0) (81,2)};
+        \addplot[dashed] coordinates {(116,0) (116,2)};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Klassischer Box-Plot zu Aufgabe 2.c (PGF/TikZ)}
 \end{figure}
