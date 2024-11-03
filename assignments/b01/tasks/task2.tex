@@ -3,7 +3,7 @@
 \section{Aufgabe BI-2}
 
 \begin{task}
-    Für die Bevölkerung gewisser Regionen der Erde wurden folgende Geschlechterverteilungen (das heißt Männer 100 Frauen):
+    Für die Bevölkerung gewisser Regionen der Erde wurden folgende Geschlechterverteilungen (das heißt Männer 100 Frauen)
     \begin{tightcenter}
         96  101  98  96  101  98  105  106  101  104  88  97 \\
         100  96  101  92  98  104  102  97  98  93  100  94
@@ -33,7 +33,11 @@ Einteilung der Klassen mit Breite $d_j=5$ wie folgt:
 \end{tabular}
 \end{table}
 
-% TODO: Histogramm
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/task2_histogramm.jpeg}
+    \caption{Histogramm für Aufgabe 2.a}
+\end{figure}
 
 
 \begin{task}
@@ -81,9 +85,48 @@ $$
 
 $\Rightarrow F(x_1) = F(95.5) = 0.1\overline{6},~~F(x_2) = F(100) = 0.625$
 
+Die empirische Verteilungsfunktion nimmt an der Stelle $x_1=95.5$ den Wert $0.1\overline{6}$ und an der Stelle $x_2=100$ den Wert $0.625$ an.
+
 
 \begin{task}
     \begin{enumerate}
         \item[(c)] Erstellen Sie den zu den Beobachtungswerten gehörigen klassischen Box-Plot (mit Kennzeichnung von Ausreißern und Extremwerten, so vorhanden).
     \end{enumerate}
 \end{task}
+
+Fünf-Punkte-Zusammenfassung
+
+$x_{(1)} = 88$
+
+$q\cdot n = 0.25\cdot 24 = 6\in\mathbb{Z} \Rightarrow$ nicht eindeutig \\
+$\Rightarrow \tilde{x}_{0.25} = \frac12(x_{(6)} + x_{(7)}) = \frac12(96+96) = 96$
+
+$n = 24 \notin 2\mathbb{N}$ \\
+$\Rightarrow x_{\operatorname{med}} = \frac12(x_{(12)} + x_{(13)}) = \frac12(98+98) = 98$
+
+$q\cdot n = 0.75\cdot 24 = 18\in\mathbb{Z} \Rightarrow$ nicht eindeutig \\
+$\Rightarrow \tilde{x}_{0.75} = \frac12(x_{(18)} + x_{(19)}) = \frac12(101+101) = 101$
+
+$x_{(n)} = x_{(24)} = 106$
+
+\vspace{0.5cm}
+
+$\Rightarrow$ Quartilsabstand $d_Q = \tilde{x}_{0.75} - \tilde{x}_{0.25} = 101 - 96 = 5$
+
+$\frac32 d_Q = \frac32\cdot5 = 7.5 \Rightarrow [88.5, 108.5]$ \\
+$\Rightarrow$ Ausreißer: $\lbrace 88 \rbrace$
+
+$3\cdot d_Q = 3\cdot5 = 15 \Rightarrow [81, 116]$ \\
+$\Rightarrow$ keine Extremwerte
+
+\vspace{0.5cm}
+
+linker Whisker: $\min\lbrace x_j : x_j \ge \tilde{x}_{0.25} - \frac32 d_Q \rbrace = 92$
+
+rechter Whisker: $\max\lbrace x_j : x_j \le \tilde{x}_{0.75} + \frac32 d_Q \rbrace = 106$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/task2_box_plot.jpeg}
+    \caption{Klassischer Box-Plot zu Aufgabe 2.c}
+\end{figure}
