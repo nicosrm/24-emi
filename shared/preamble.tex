@@ -1,0 +1,56 @@
+\documentclass[
+    a4paper,
+    12pt,
+]{article}
+
+\usepackage[
+    top=3cm,
+    bottom=3cm,
+    left=3cm,
+    right=3cm
+]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{parskip}
+
+\usepackage[
+  final,
+  colorlinks=true,
+  linkcolor=blue
+]{hyperref}
+\usepackage[htt]{hyphenat}  % htt -> allow to hyphenate TT text
+
+\usepackage{multirow}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{caption,subcaption}
+\usepackage{float}
+
+\usepackage{csquotes}
+\usepackage{amsbsy} % bold maths symbols, \bm{} or \pmb{}
+
+\usepackage{fancyhdr}
+
+\usepackage[many]{tcolorbox}
+\newtcolorbox{task}{
+    enhanced,
+    boxrule = 0pt,
+    frame hidden,
+    borderline west = {0.5mm}{0.0mm}{black},
+    breakable,
+}
+
+% https://tex.stackexchange.com/questions/24186/#24197
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
