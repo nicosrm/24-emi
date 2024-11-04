@@ -16,11 +16,38 @@
     \end{enumerate}
 \end{task}
 
+Aus der Graphik lassen sich die folgenden Sprünge ablesen, welche die beobachteten Merkmalsausprägungen von $X$ darstellen: $\lbrace 0, 1, 2, 4, 5 \rbrace$.
+
 \begin{task}
     \begin{enumerate}
         \item[(b)] Bestimmen Sie die absoluten Häufigkeiten der Merkmalsausprägungen von $X$.
     \end{enumerate}
 \end{task}
+
+$$
+\begin{aligned}
+    \forall j\in\lbrace 1,2,\ldots,\ell\rbrace:
+    r_j &= \begin{cases}
+        F(x_j)              &\text{für}~j=0 \\
+        F(x_j) - F(x_{j-1}) &\text{für}~j>0
+    \end{cases} \\
+    a_j &= n\cdot r_j
+\end{aligned}
+$$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|clll}
+    $j$ & $x_j$ & $F(x_j)$ & $r_j$ & $a_j$ \\ \hline
+    1   & $0$   & 0.125    & 0.125 & 25    \\
+    2   & $1$   & 0.25     & 0.125 & 25    \\
+    3   & $2$   & 0.5      & 0.25  & 50    \\
+    4   & $4$   & 0.75     & 0.25  & 50    \\
+    5   & $5$   & 1        & 0.25  & 50    \\
+\end{tabular}
+\end{table}
+
+Die absoluten Häufigkeiten $a_j$ können aus der oben dargestellter Tabelle abgelesen werden.
 
 \begin{task}
     \begin{enumerate}
