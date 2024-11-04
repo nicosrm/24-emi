@@ -16,3 +16,23 @@
 
     zusammengestellt. Bestimmen Sie für jene Daten das Kontingenzmaß $V$ nach Cramér und interpretieren Sie jenen Werte.
 \end{task}
+
+$$
+\begin{aligned}
+    \chi^2 &= \sum_{j=1}^m \sum_{k=1}^\ell \frac{(h_{jk} - \frac1n h_{j\bullet} h_{\bullet k})^2}{\frac1n h_{j\bullet} h_{\bullet k}} \\
+    &= \frac{(5\cdot 122 - 160 \cdot 36)^2}{(5+36)(160+122)(5+160)(36+122)}
+    = \frac{26522500}{301421340} \\
+    \Rightarrow \chi^2 &\approx 0.0880
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    V &= \sqrt{\frac{\chi^2}{n (\min\lbrace m,\ell \rbrace - 1)}} \\
+    &= \frac{\chi^2}{35 \cdot (\min\lbrace2,2\rbrace - 1)}
+    \approx \frac{0.0880}{35 \cdot 1} = \frac{0.0880}{35} \\
+    \Rightarrow V &\approx 0.0025
+\end{aligned}
+$$
+
+Es ergibt sich ein Kontingenzmaß nach Cramér von $V\approx0.0025$. Dies liegt bei Nahe 0, was für einen sehr geringen Zusammenhang zwischen beiden Merkmalen spricht.
