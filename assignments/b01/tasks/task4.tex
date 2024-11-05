@@ -17,22 +17,48 @@
     zusammengestellt. Bestimmen Sie für jene Daten das Kontingenzmaß $V$ nach Cramér und interpretieren Sie jenen Werte.
 \end{task}
 
+Vervollständigen zur folgenden Kontingenztabelle:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|ccc|l}
+             & Arbeiter/in & angestellt & beamtet & gesamt \\ \hline
+    weiblich & 5           & 160        & 42      & 207    \\
+    männlich & 36          & 122        & 35      & 193    \\ \hline
+    gesamt   & 41          & 282        & 77      & 400
+\end{tabular}
+\end{table}
+
+Daraus Bestimmung von Zwischenschritten $\frac1n h_{j\bullet} h_{\bullet k}$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|c|c|c}
+    $\frac1n h_{j\bullet} h_{\bullet k}$ & Arbeiter/in                        & angestellt                          & beamtet                            \\ \hline
+    weiblich                             & $\frac{41\cdot207}{400} = 21.2175$ & $\frac{282\cdot207}{400} = 145.935$ & $\frac{77\cdot207}{400} = 39.8475$ \\
+    männlich                             & $\frac{41\cdot193}{400} = 19.7825$ & $\frac{282\cdot193}{400} = 136.065$ & $\frac{77\cdot193}{400} = 37.1525$
+\end{tabular}
+\end{table}
+
+...sowie des $\chi^2$-Koeffizienten
+
 $$
 \begin{aligned}
     \chi^2 &= \sum_{j=1}^m \sum_{k=1}^\ell \frac{(h_{jk} - \frac1n h_{j\bullet} h_{\bullet k})^2}{\frac1n h_{j\bullet} h_{\bullet k}} \\
-    &= \frac{(5\cdot 122 - 160 \cdot 36)^2}{(5+36)(160+122)(5+160)(36+122)}
-    = \frac{26522500}{301421340} \\
-    \Rightarrow \chi^2 &\approx 0.0880
+    &= \frac{(5-21.2175)^2}{21.2175} + \frac{(160-145.935)^2}{145.935} + \frac{(42-39.8475)^2}{39.8475} \\
+    & \quad~ + \frac{(36-19.7825)^2}{19.7825} + \frac{(122-136.065)^2}{136.065} + \frac{(35-37.1525)^2}{37.1525} \\
+    \Rightarrow \chi^2 &\approx 28.7412
 \end{aligned}
 $$
+
+Abschließende Bestimmung des Kontingenzmaßes nach Cramér $V$:
 
 $$
 \begin{aligned}
     V &= \sqrt{\frac{\chi^2}{n (\min\lbrace m,\ell \rbrace - 1)}} \\
-    &= \frac{\chi^2}{35 \cdot (\min\lbrace2,2\rbrace - 1)}
-    \approx \frac{0.0880}{35 \cdot 1} = \frac{0.0880}{35} \\
-    \Rightarrow V &\approx 0.0025
+    &\approx \frac{28.7412}{400 \cdot (\min\lbrace2,3\rbrace - 1)} = \frac{28.7412}{400 \cdot 2} \\
+    \Rightarrow V &\approx 0.0359
 \end{aligned}
 $$
 
-Es ergibt sich ein Kontingenzmaß nach Cramér von $V\approx0.0025$. Dies liegt bei Nahe 0, was für einen sehr geringen Zusammenhang zwischen beiden Merkmalen spricht.
+Es ergibt sich ein Kontingenzmaß nach Cramér von $V\approx0.0359$. Dies liegt bei Nahe 0, was für einen sehr geringen Zusammenhang zwischen beiden Merkmalen spricht.
