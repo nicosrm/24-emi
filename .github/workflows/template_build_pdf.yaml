@@ -31,7 +31,7 @@ jobs:
       
       - name: Copy file
         run: |
-          cp ${{ inputs.tex-workdir }}/${{ inputs.tex-file }}.pdf ${{ inputs.output-name }}
+          cp ${{ inputs.tex-workdir }}/${{ inputs.tex-file }}.pdf ${{ inputs.output-name }}.pdf
       
       - name: Upload as artifact
         uses: actions/upload-artifact@v4
