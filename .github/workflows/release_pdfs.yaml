@@ -1,0 +1,27 @@
+name: release pdfs
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build-pdfs:
+    uses: ./.github/workflows/build_pdfs.yaml
+  
+  release:
+    runs-on: ubuntu-latest
+    needs: [ build-pdfs ]
+    permissions:
+      contents: write
+    steps:
+      - name: Download slides artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: emi_*
+      
+      - name: Release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          artifacts: emi_b01.pdf
+          body: ${{ github.ref_name }}
+          allowUpdates: true
