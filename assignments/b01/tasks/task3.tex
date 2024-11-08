@@ -46,9 +46,10 @@ $$
     5   & $5$   & 1        & 0.25  & 50    \\
 \end{tabular}
 \end{table}
-
+\nopagebreak
 Die absoluten Häufigkeiten $h_j$ können aus der oben dargestellten Tabelle abgelesen werden.
 
+\pagebreak
 
 \begin{task}
     \begin{enumerate}
@@ -56,22 +57,20 @@ Die absoluten Häufigkeiten $h_j$ können aus der oben dargestellten Tabelle abg
     \end{enumerate}
 \end{task}
 
-$$
-\begin{aligned}
-    \overline{x} &= \sum_{j=1}^m a_j\cdot r_j \\
-    &= 0\cdot 0.125 + 1\cdot 0.125 + 2\cdot 0.25 + 4\cdot 0.25 + 5\cdot 0.25 \\
-    \Rightarrow \overline{x} &= 2.875
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-    s^2 &= \frac{1}{n-1} \sum_{j=1}^m (x_j - \overline{x})^2 \\
-    &= \frac{1}{200-1} ((0 - 2.875)^2 + (1 - 2.875)^2 + (2 - 2.875)^2 + (4 - 2.875)^2 + (5 - 2.875)^2) \\
-    &\approx \frac{1}{199} \cdot 18.3281 \\
-    \Rightarrow s^2 &\approx 0.0921
-\end{aligned}
-$$
+{\allowdisplaybreaks
+    \begin{align*}
+        \overline{x} &= \sum_{j=1}^m a_j\cdot r_j \\*
+        &= 0\cdot 0.125 + 1\cdot 0.125 + 2\cdot 0.25 + 4\cdot 0.25 + 5\cdot 0.25 \\*
+        \Rightarrow \overline{x} &= 2.875 \\
+        \nonumber \\
+        %
+        s^2 &= \frac{1}{n-1} \sum_{j=1}^m (x_j - \overline{x})^2 \\*
+        &= \frac{1}{200-1} \big((0 - 2.875)^2 + (1 - 2.875)^2 + (2 - 2.875)^2 \\*
+            &\qquad\qquad\quad + (4 - 2.875)^2 + (5 - 2.875)^2 \big) \\*
+        &\approx \frac{1}{199} \cdot 18.3281 \\*
+        \Rightarrow s^2 &\approx 0.0921
+    \end{align*}
+}
 
 Insgesamt ergibt sich ein arithmetisches Mittel von $\overline{x} = 2.875$ und eine (korrigierte) Varianz von $s^2 \approx 0.0921$.
 
