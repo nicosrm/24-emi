@@ -16,3 +16,47 @@
 
     Wie groß ist dann der Korrelationskoeffizient nach Bravais-Pearson $r_{X,Y}$ für die Gesamtstichprobe?
 \end{task}
+
+{\allowdisplaybreaks
+    \begin{align*}
+        n &= n_1 + n_2 = 10 + 10 = 20 \\*
+        \nonumber \\
+        %
+        \overline{x} &= \frac1n (n_1 \cdot \overline{x}^{(1)} + n_2 \cdot \overline{x}^{(2)}) \\*
+        &= \frac{1}{20} (10\cdot12 + 10\cdot0) = \frac{1}{20} \cdot 120 \\*
+        \Rightarrow \overline{x} &= 6 \\
+        \nonumber \\
+        %
+        \overline{y} &= \frac1n (n_1 \cdot \overline{y}^{(1)} + n_2 \cdot \overline{y}^{(2)}) \\*
+        &= \frac{1}{20} (10\cdot0 + 10\cdot6) = \frac{1}{20} \cdot 60 \\*
+        \Rightarrow \overline{y} &= 3 \\
+        \nonumber \\
+        %
+        \tilde{s}_{X,X}^2 &= \frac{1}{n} \Big( n_1 \cdot \big( \tilde{s}_X^{(1)} \big)^2 + n_2 \cdot \big( \tilde{s}_X^{(2)} \big)^2 \Big)
+            + \frac1n \Big( n_1 \big( \overline{x}^{(1)} - \overline{x} \big)^2 + n_2 \big( \overline{x}^{(2)} - \overline{x} \big)^2 \Big) \\*
+        &= \frac{1}{20} \big(10\cdot36^2 + 10\cdot9^2 \big) + \frac{1}{20} \big( 10\cdot (12 - 6)^2 + 10 \cdot (0 - 6)^2 \big) \\*
+        \Rightarrow \tilde{s}_{X,X}^2 &= 724.5 \\
+        \nonumber \\
+        %
+        \tilde{s}_{Y,Y}^2 &= \frac{1}{n} \Big( n_1 \cdot \big( \tilde{s}_Y^{(1)} \big)^2 + n_2 \cdot \big( \tilde{s}_Y^{(2)} \big)^2 \Big)
+            + \frac1n \Big( n_1 \big( \overline{y}^{(1)} - \overline{y} \big)^2 + n_2 \big( \overline{y}^{(2)} - \overline{y} \big)^2 \Big) \\*
+        &= \frac{1}{20} \big( (10\cdot9^2) + 10\cdot36^2 \big) + \frac{1}{20} \big( 10\cdot(0-3)^2 + 10\cdot(6-3)^2 \big) \\*
+        \Rightarrow \tilde{s}_{Y,Y}^2 &= 697.5\\
+        \nonumber \\
+        %
+        \tilde{s}_{X,Y} &= \frac1n \big( n_1 \cdot r_{X,Y}^{(1)} \cdot \tilde{s}_{X,X}^{(1)} \cdot \tilde{s}_{Y,Y}^{(1)}
+            + n_2 \cdot r_{X,Y}^{(2)} \cdot \tilde{s}_{X,X}^{(2)} \cdot \tilde{s}_{Y,Y}^{(2)} \big) \\*
+        &\quad + \frac1n \big( n_1 (\overline{x}^{(1)} - \overline{x}) (\overline{y}^{(1)} - \overline{y})
+            + n_2 (\overline{x}^{(2)} - \overline{x}) (\overline{y}^{(2)} - \overline{y}) \big) \\*
+        &= \frac{1}{20} (10\cdot1\cdot36\cdot9 + 10\cdot1\cdot9\cdot36) +
+            \frac{1}{20} \big( 10(12-6)(0-3) + 10(0-6)(6-3) \big) \\*
+        \Rightarrow \tilde{s}_{X,Y}&= 306\\
+        \nonumber \\
+        %
+        r_{X,Y} &= \frac{\tilde{s}_{X,Y}}{\tilde{s}_X \tilde{s}_Y} = \frac{\tilde{s}_{X,Y}}{\sqrt{\tilde{s}_X^2 \tilde{s}_Y^2}} \\*
+        &= \frac{306}{\sqrt{724.5 \cdot 697.5}} \\*
+        \Rightarrow r_{X,Y} &\approx 0.4305
+    \end{align*}
+}
+
+Insgesamt ergibt sich ein Korrelationskoeffizient nach Bravais-Pearson von $r_{X,Y}\approx0.4305$. Da dieser Wert kleiner als 0.5 ist, ist von einer schwachen Korrelation zwischen Merkmal $X$ und $Y$ auszugehen.
