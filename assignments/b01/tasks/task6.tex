@@ -28,6 +28,38 @@
 
 \begin{task}
     \begin{enumerate}
-        \item[(c)] Bestimmen Sie (zum Vergeich) den Rangkorrelationskoeffizienten $r_{X,Y}^*$ nach Spearman (da ja im Grunde das Merkmal $Y$ nur ordinalskaliert ist) und interpretieren Sie kurz Ihr Ergebnis.
+        \item[(c)] Bestimmen Sie (zum Vergleich) den Rangkorrelationskoeffizienten $r_{X,Y}^\star$ nach Spearman (da ja im Grunde das Merkmal $Y$ nur ordinalskaliert ist) und interpretieren Sie kurz Ihr Ergebnis.
     \end{enumerate}
 \end{task}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|cccccccccc}
+    $i$        & 1   & 2   & 3   & 4   & 5   & 6   & 7   & 8   & 9   & 10  \\ \hline\hline
+
+    $x_i$      & 181 & 171 & 166 & 175 & 183 & 191 & 170 & 179 & 185 & 190 \\
+    $\Rg(x_i)$ & 6   & 3   & 1   & 4   & 7   & 10  & 2   & 5   & 8   & 9   \\ \hline\hline
+
+    $y_i$      & 3   & 7   & 10  & 8   & 5   & 2   & 9   & 6   & 1   & 4   \\
+    $\Rg(y_i)$ & 3   & 7   & 10  & 8   & 5   & 2   & 9   & 6   & 1   & 4
+\end{tabular}
+\end{table}
+
+Hier kommen \emph{keine} Werte in den Stichproben $x_1,\ldots,x_n$ und $y_1,\ldots,y_n$ mehrfach vor. Daher kann die vereinfachte Formel zur Bestimmung des Rangkorrelationskoeffizienten $r^\star_{X,Y}$ verwendet werden.
+
+$$
+\begin{aligned}
+    r_{X,Y}^\star &= 1- \frac{6}{n(n^2-1)} \sum_{j=1}^{n} \Big(\Rg(x_j)^2 - \Rg(y_j)^2\Big) \\
+    &= 1 - \frac{6}{10\cdot(10^2-1)} \sum_{j=1}^{10} \Big(\Rg(x_j)^2 - \Rg(y_j)^2\Big) \\
+    &= 1 - \frac{6}{990} \Big( (6-3)^2 + (3-7)^2 + (1-10)^2 + (4-8)^2 + (7-5)^2 + (10-2)^2 \\
+    &\quad + (2-9)^2 + (5-6)^2 + (8-1)^2 + (9-4)^2 \Big) \\
+    &= 1 - \frac{1}{165}\cdot 314 \\
+    \Rightarrow r_{X,Y}^\star &\approx -0.9030
+\end{aligned}
+$$
+
+Es ergibt sich ein Rangkorrelationskoeffizient (nach Spearman) von $r_{X,Y}^\star \approx -0.9030$. Dies weißt auf einen stark gegenläufigen monotonen Zusammenhang hin.
+
+{\color{red}
+    TODO: Vergleich zu (a) hinzufügen.
+}
