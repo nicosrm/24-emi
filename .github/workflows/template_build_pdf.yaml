@@ -26,7 +26,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           working_directory: ${{ inputs.tex-workdir }}
-          root_file: ${{ inputs.tex-file }}
+          root_file: ${{ inputs.tex-file }}.tex
           latexmk_shell_escape: true
       
       - name: Copy file
