@@ -1,0 +1,12 @@
+name: build pdfs
+on:
+  push:
+  workflow_call:
+
+jobs:
+  build-b01:
+    uses: ./.github/workflows/template_build_pdf.yaml
+    with:
+      tex-workdir: assignments/b01
+      tex-file: b01
+      output-name: emi_b01
