@@ -1,6 +1,6 @@
 # Empirische Methoden für Informatiker
 
-Dieses Repository enthält meine Lösungen für die Belege im Modul N604 *Empirische Methoden für Informatiker*.
+Dieses Repository enthält meine Lösungen für die Belege sowie weitere Code-Schnipsel aus dem Modul N604 *Empirische Methoden für Informatiker*.
 
 | Kontext  | Beschreibung                                                                                                                                |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------|
